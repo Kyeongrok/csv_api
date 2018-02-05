@@ -21,17 +21,15 @@ public class HistoryController {
     private CandleChartService candleChartService;
 
     @GetMapping("history")
-    public String getArgs(
+    public ResponseEntity getArgs(
             @RequestParam(value = "resolution")String resolution,
             @RequestParam(value = "from")String from,
             @RequestParam(value = "to")String to) {
 
-        int iResolution = 0;
-        int iFrom = 0;
-        int iTo = 0;
+        int iResolution = Integer.parseInt(resolution);
+        int iFrom = Integer.parseInt(from);
+        int iTo = Integer.parseInt(to);
 
-
-
-        return resolution + ":" + from + ":" + to;
+        return new ResponseEntity<>(candleChartService.getCandleChartDataDto(iResolution, iFrom, iTo), HttpStatus.OK);
     }
 }

@@ -1,11 +1,18 @@
 package com.plutus.ds.dto;
 
-public class CandleChartDataDto {
-    private int[] time;
-    private Double[] open;
-    private Double[] high;
-    private Double[] low;
-    private Double[] close;
-    private Double[] volume;
+import lombok.Data;
+import org.springframework.http.ResponseEntity;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Data
+public class CandleChartDataDto{
+    private List<Long> time;
+    private List<Double> open;
+    private List<Double> high;
+    private List<Double> low;
+    private List<Double> close;
+    private List<Double> volume;
 
 }
