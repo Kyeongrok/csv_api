@@ -26,6 +26,11 @@ public class HistoryController {
             @RequestParam(value = "from")String from,
             @RequestParam(value = "to")String to) {
 
+        int iResolution = 0;
+        int iFrom = 0;
+        int iTo = 0;
+
+
 
         return resolution + ":" + from + ":" + to;
     }
