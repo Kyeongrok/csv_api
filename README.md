@@ -1,3 +1,6 @@
+# 실행 url
+    * http://localhost:8080/history?resolution=1&from=123&to=234
+    
 # 과제 개요
     * 거래(Trade) 데이터를 이용해 캔들차트 데이터를 반환하는 Web API를 개발하시오.
     * 제한 시간 4시간
